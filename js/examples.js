@@ -1,49 +1,28 @@
 /*
-  ? Дано 90 хвилин, дізнайтеся скільки в цьому числі міститься годин і хвилин.
-  ? Результат виведіть у консоль.
+? Напиши скрипт, який для об'єкта user послідовно:
+? додає властивість mood зі значенням 'happy'
+? замінює значення hobby на 'skydiving'
+? замінює значення premium на false
+? виводить вміст об'єкта user у форматі ключ: значення використовуючи Object.keys() і for...of
 */
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: false,
+// };
 
 /*
-  ? Дано число 23.5, застосуйте до нього різноманітні методи заокруглення.
-  ? Протестуйте на числах, 23.3, 23.9
+? Напишіть ф-цію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю.
+? Ф-ція рахує і повертає загальну вартість каміння з таким ім'ям.
 */
+// const stones = [
+//   { name: 'Смарагд', price: 1300, quantity: 4 },
+//   { name: 'Діамант', price: 2700, quantity: 3 },
+//   { name: 'Сапфір', price: 400, quantity: 7 },
+//   { name: 'Щебінь', price: 200, quantity: 2 },
+// ];
 
-/*
-  ? Попросіть користувача ввести число та ступінь.
-  ? Зведіть число до ступеня і виведіть результат у консоль.
-*/
-
-/*
-  ? Згенеруйте рандомне число:
-  ? від 0 до 1;
-*/
-
-//? Згенеруйте рандомне число. Мінімальне та максимально значення, отримати від користувача
-
-//? У нас є рядок '24px', дізнайтеся на що закінчується цей рядок, на: %, rem, em або px;
-
-//? Логічні оператори
-// console.log(true && 3);
-// console.log(false && 3);
-// console.log(true && 4 && 'kiwi');
-// console.log(true && 0 && 'kiwi');
-// console.log(true || 3);
-// console.log(true || 3 || 4);
-// console.log(true || false || 7);
-// console.log(null || 2 || undefined);
-// console.log((1 && null && 2) > 0);
-// console.log(null || (2 && 3) || 4);
-
-//? Приведення типів
-// console.log(2 + 5 + '' + 1 + 0);
-// console.log('' + 1 - 0);
-// console.log(true + false);
-// console.log(6 / '3');
-// console.log('2' * '3');
-// console.log(4 + 5 + 'px');
-// console.log('$' + 4 + 5);
-// console.log('4' - 2);
-// console.log('4px' - 2);
-// console.log(7 / 0);
-// console.log('  -9  ' + 5);
-// console.log(null + 1);
+// console.log(calcTotalPrice(stones, 'Смарагд')); // 5200
+// console.log(calcTotalPrice(stones, 'Діамант')); // 8100
+// console.log(calcTotalPrice(stones, 'Аконіт')); // Каменя за такою назвою не знайдено
