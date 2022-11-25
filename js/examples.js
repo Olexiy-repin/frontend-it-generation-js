@@ -1,49 +1,176 @@
 /*
-  ? Дано 90 хвилин, дізнайтеся скільки в цьому числі міститься годин і хвилин.
-  ? Результат виведіть у консоль.
+? Перепиши функцію так, щоб вона приймала один об'єкт параметрів,
+? замість набору незалежних аргументів.
 */
+// function calcBMI({ height, weight }) {
+//   const numericWeight = Number(weight.replace(',', '.'));
+//   const numericHeight = Number(height.replace(',', '.'));
+
+//   return Number((numericWeight / numericHeight ** 2).toFixed(1));
+// }
+
+// Було
+// console.log(calcBMI('88,3', '1.75'));
+// console.log(calcBMI('68,3', '1.65'));
+// console.log(calcBMI('118,3', '1.95'));
+
+// Очікується
+// console.log(
+//   calcBMI({
+//     height: '1.75',
+//     weight: '88,3',
+//   })
+// );
+// console.log(
+//   calcBMI({
+//     weight: '68,3',
+//     height: '1.65',
+//   })
+// );
+// console.log(
+//   calcBMI({
+//     weight: '118,3',
+//     height: '1.95',
+//   })
+// );
 
 /*
-  ? Дано число 23.5, застосуйте до нього різноманітні методи заокруглення.
-  ? Протестуйте на числах, 23.3, 23.9
+? Напиши функцію getStockReport(obj), щоб вона приймала об'єкт параметрів із властивостями companyName і stock і виводила репорт
+? про кількість товарів на складі будь-якої компанії.
 */
+
+// function getStockReport({ companyName, stock }) {
+//   const stockValues = Object.values(stock);
+//   let total = 0;
+
+//   for (const value of stockValues) {
+//     total += value;
+//   }
+
+//   return `${companyName} has ${total} items in stock`;
+// }
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdrone Systems',
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   })
+// ); // "Cyberdrone Systems has 200 items in stock"
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Belacci',
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   })
+// ); // "Belacci has 35 item in stock"
 
 /*
-  ? Попросіть користувача ввести число та ступінь.
-  ? Зведіть число до ступеня і виведіть результат у консоль.
+? Напиши функцію createContact(partialContact) так,
+? щоб вона повертала новий об'єкт контакту з доданими властивостями id і createdAt,
+? а також list зі значенням "default" якщо у partialContact немає такої властивості.
 */
+// const generateId = function () {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// };
+
+// const createContact = function (partialContact) {
+//   return {
+//     id: generateId(),
+//     createdAt: new Date(),
+//     list: 'default',
+//     ...partialContact,
+//   };
+// };
+
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   })
+// );
+
+// console.log(
+//   createContact({
+//     name: 'Poly',
+//     email: 'poly@hotmail.com',
+//   })
+// );
 
 /*
-  ? Згенеруйте рандомне число:
-  ? від 0 до 1;
+? Перепиши функцію так, щоб вона приймала один об'єкт параметрів,
+? замість набору незалежних аргументів.
+*/
+// function printContactsInfo(names, phones) {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   }
+// }
+
+// Було
+// printContactsInfo(
+//   'Jacob,William,Solomon,Artemis',
+//   '89001234567,89001112233,890055566377,890055566300'
+// );
+
+// Очікується
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
+/*
+? Перепиши функцію так, щоб вона приймала один об'єкт параметрів,
+? замість набору незалежних аргументів.
+*/
+// function getBotReport(companyName, repairBots, defenceBots) {
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// }
+
+// Було
+// console.log(getBotReport('Cyberdyne Systems', 150, 50));
+
+// Очікується
+// console.log(
+//   getBotReport({
+//     companyName: 'Cyberdyne Systems',
+//     bots: {
+//       repair: 150,
+//       defence: 50,
+//     },
+//   })
+// ); // "Cyberdyne Systems has 200 bots in stock"
+
+/*
+? Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
 */
 
-//? Згенеруйте рандомне число. Мінімальне та максимально значення, отримати від користувача
+// console.log(
+//   transformUsername({
+//     id: 1,
+//     firstName: 'Jacob',
+//     lastName: 'Mercer',
+//     email: 'j.mercer@mail.com',
+//     friendCount: 40,
+//   })
+// );
 
-//? У нас є рядок '24px', дізнайтеся на що закінчується цей рядок, на: %, rem, em або px;
-
-//? Логічні оператори
-// console.log(true && 3);
-// console.log(false && 3);
-// console.log(true && 4 && 'kiwi');
-// console.log(true && 0 && 'kiwi');
-// console.log(true || 3);
-// console.log(true || 3 || 4);
-// console.log(true || false || 7);
-// console.log(null || 2 || undefined);
-// console.log((1 && null && 2) > 0);
-// console.log(null || (2 && 3) || 4);
-
-//? Приведення типів
-// console.log(2 + 5 + '' + 1 + 0);
-// console.log('' + 1 - 0);
-// console.log(true + false);
-// console.log(6 / '3');
-// console.log('2' * '3');
-// console.log(4 + 5 + 'px');
-// console.log('$' + 4 + 5);
-// console.log('4' - 2);
-// console.log('4px' - 2);
-// console.log(7 / 0);
-// console.log('  -9  ' + 5);
-// console.log(null + 1);
+// console.log(
+//   transformUsername({
+//     id: 2,
+//     firstName: 'Adrian',
+//     lastName: 'Cross',
+//     email: 'a.cross@hotmail.com',
+//     friendCount: 20,
+//   })
+// );
