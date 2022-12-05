@@ -1,49 +1,72 @@
 /*
-  ? Дано 90 хвилин, дізнайтеся скільки в цьому числі міститься годин і хвилин.
-  ? Результат виведіть у консоль.
+? Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю та розраховує
+? і повертає загальну вартість каменів з таким ім'ям.
 */
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
+// };
+
+// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+// console.log(chopShop.calcTotalPrice('Ametist')); // Такого каменя не знайдено
 
 /*
-  ? Дано число 23.5, застосуйте до нього різноманітні методи заокруглення.
-  ? Протестуйте на числах, 23.3, 23.9
+? Виконайте рефакторинг методів об'єкта phonebook щоб код запрацював.
 */
+// const phonebook = {
+//   contacts: [],
+
+//   add(contact) {
+//     const newContact = {
+//       list: 'default',
+//       ...contact,
+//       id: generateId(),
+//       createdAt: getDate(),
+//     };
+
+//     contacts.push(newContact);
+//   },
+
+//   generateId() {
+//     return '_' + Math.random().toString(36).substr(2, 9);
+//   },
+
+//   getDate() {
+//     return Date.now();
+//   },
+// };
+
+// phonebook.add({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+//   list: 'friends',
+// });
+
+// phonebook.add({
+//   name: 'Poly',
+//   email: 'poly@hotmail.com',
+// });
+
+// console.log(phonebook);
 
 /*
-  ? Попросіть користувача ввести число та ступінь.
-  ? Зведіть число до ступеня і виведіть результат у консоль.
+? Створіть об'єкт calculator із трьома методами:
+?
+? read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
+? add() - повертає суму збережених значень.
+? mult() - перемножує збережені значення та повертає результат.
 */
 
-/*
-  ? Згенеруйте рандомне число:
-  ? від 0 до 1;
-*/
+// const calculator = {};
 
-//? Згенеруйте рандомне число. Мінімальне та максимально значення, отримати від користувача
+// calculator.read(20, 20);
 
-//? У нас є рядок '24px', дізнайтеся на що закінчується цей рядок, на: %, rem, em або px;
-
-//? Логічні оператори
-// console.log(true && 3);
-// console.log(false && 3);
-// console.log(true && 4 && 'kiwi');
-// console.log(true && 0 && 'kiwi');
-// console.log(true || 3);
-// console.log(true || 3 || 4);
-// console.log(true || false || 7);
-// console.log(null || 2 || undefined);
-// console.log((1 && null && 2) > 0);
-// console.log(null || (2 && 3) || 4);
-
-//? Приведення типів
-// console.log(2 + 5 + '' + 1 + 0);
-// console.log('' + 1 - 0);
-// console.log(true + false);
-// console.log(6 / '3');
-// console.log('2' * '3');
-// console.log(4 + 5 + 'px');
-// console.log('$' + 4 + 5);
-// console.log('4' - 2);
-// console.log('4px' - 2);
-// console.log(7 / 0);
-// console.log('  -9  ' + 5);
-// console.log(null + 1);
+// console.log(calculator.add());
+// console.log(calculator.mult());
