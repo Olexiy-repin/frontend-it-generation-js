@@ -9,8 +9,52 @@
 /*
 ? Порахуємо суму масиву чисел
 */
+
+// Акумулятор з початковим значенням
+/*
+1 ітерація
+acc = 0;
+el = 1;
+idx = 0;
+arr = [1, 2, 3];
+
+2 ітерація
+acc = 1;
+el = 2;
+idx = 1;
+arr = [1, 2, 3];
+
+3 ітерація
+acc = 3;
+el = 3;
+idx = 2;
+arr = [1, 2, 3];
+*/
 // const numbers = [1, 2, 3];
-// const total = null;
+// const total = numbers.reduce((acc, el, idx, arr) => {
+//   return acc + el;
+// }, 0);
+
+// console.log(total);
+
+// Акумулятор без початкового значення
+/*
+1 ітерація
+acc = 1;
+el = 2;
+idx = 1;
+arr = [1, 2, 3];
+
+2 ітерація
+acc = 3;
+el = 3;
+idx = 2;
+arr = [1, 2, 3];
+*/
+// const numbers = [1, 2, 3];
+// const total = numbers.reduce((acc, el, idx, arr) => {
+//   return acc + el;
+// });
 
 // console.log(total);
 
@@ -30,6 +74,16 @@
 //   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
 // ];
 
-// const getTotalAmount = cars => {};
+// Повна версія
+// const getTotalAmount = cars => {
+//   return cars.reduce((acc, el, idx, arr) => {
+//     return acc + el.amount;
+//   }, 0);
+// };
+
+// console.log(getTotalAmount(cars));
+
+// Скорочена версія
+// const getTotalAmount = cars => cars.reduce((acc, el) => acc + el.amount, 0);
 
 // console.log(getTotalAmount(cars));
