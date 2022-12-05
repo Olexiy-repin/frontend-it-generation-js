@@ -1,4 +1,32 @@
 /*
+? Виклик checkPassword() у наведеному нижче коді повинен перевірити пароль та викликати user.loginOk/loginFail залежно від відповіді.
+? Однак його виклик призводить до помилки. Чому?
+ */
+// const checkPassword = function (ok, fail) {
+//   const password = 'rockstar';
+
+//   if (password === 'rockstar') {
+//     ok();
+//   } else {
+//     fail();
+//   }
+// };
+
+// const user = {
+//   name: 'Василь',
+
+//   loginOk() {
+//     console.log(`${this.name} logged in`);
+//   },
+
+//   loginFail() {
+//     console.log(`${this.name} failed to log in`);
+//   },
+// };
+
+// checkPassword(user.loginOk, user.loginFail);
+
+/*
 ? Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю та розраховує
 ? і повертає загальну вартість каменів з таким ім'ям.
 */

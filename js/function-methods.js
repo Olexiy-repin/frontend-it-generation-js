@@ -4,6 +4,14 @@
 
 //* Функції це об'єкти зі своїми властивостями та методами
 
+// const greet = function () {
+//   console.log('Hello!');
+// };
+
+// greet.test = 10;
+
+// console.dir(greet);
+
 //* call та apply
 //? Викличте функцію showFullName у контексті об'єкта user
 // const showFullName = function (message, number) {
@@ -17,12 +25,18 @@
 //   age: 30,
 // };
 
+// showFullName.call(user, 'Hello', 10);
+// showFullName.apply(user, ['Hello', 10]);
+
 //? Викличте функцію showFullName у контексті об'єкта anotherUser
 // const anotherUser = {
 //   firstName: 'Lottie',
 //   lastName: 'Burgess',
 //   age: 40,
 // };
+
+// showFullName.call(anotherUser, 'Hello', 20);
+// showFullName.apply(anotherUser, ['Hello', 20]);
 
 //* bind
 // const showFullName = function () {
@@ -35,20 +49,24 @@
 //   age: 30,
 // };
 
+// const showUserFullName = showFullName.bind(user);
+
+// showUserFullName();
+
 // const anotherUser = {
 //   firstName: 'Lottie',
 //   lastName: 'Burgess',
 //   age: 40,
 // };
 
+// const showAnotherUserFullName = showFullName.bind(anotherUser);
+
+// showAnotherUserFullName();
+
 //* Метод об'єкта у ролі колбека
 // const user = {
 //   name: 'Luis',
 //   age: 30,
-
-//   showThis() {
-//     console.log(`this ---->`, this);
-//   },
 
 //   showName() {
 //     console.log(`this name is: ${this.name}`);
@@ -56,10 +74,15 @@
 // };
 
 // const someFunction = function (callback) {
+//   /* callback = function () {
+//     this = user;
+//     console.log(`this name is: ${this.name}`);
+//   }
+//   */
 //   callback();
 // };
 
-// someFunction(user.showName);
+// someFunction(user.showName.bind(user));
 
 /*
 ? Що виведе код?
@@ -79,31 +102,3 @@
 // const copyFunc = f.bind(user).bind(anotherUser);
 
 // copyFunc();
-
-/*
-? Виклик checkPassword() у наведеному нижче коді повинен перевірити пароль та викликати user.loginOk/loginFail залежно від відповіді.
-? Однак його виклик призводить до помилки. Чому?
- */
-// const checkPassword = function (ok, fail) {
-//   const password = 'rockstar';
-
-//   if (password === 'rockstar') {
-//     ok();
-//   } else {
-//     fail();
-//   }
-// };
-
-// const user = {
-//   name: 'Василь',
-
-//   loginOk() {
-//     console.log(`${this.name} logged in`);
-//   },
-
-//   loginFail() {
-//     console.log(`${this.name} failed to log in`);
-//   },
-// };
-
-// checkPassword(user.loginOk, user.loginFail);

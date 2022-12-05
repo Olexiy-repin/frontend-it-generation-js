@@ -14,10 +14,12 @@
 //   age: 30,
 
 //   showThis() {
+//     // this = user;
 //     console.log('This --->', this);
 //   },
 
 //   showName() {
+//     // this = user;
 //     console.log(this.name);
 //   },
 // };
@@ -62,7 +64,7 @@
 // };
 
 // const showName = function () {
-//   console.log(`Hello ${this.name}`);
+//   console.log(`Hello ${this.name}!`);
 // };
 
 // const user = {
@@ -121,14 +123,22 @@
 //   name: 'Luis',
 //   age: 30,
 
-//   changeAge: newAge => {
-//     console.log(`this ---->`, this);
+//   chageUserAge(newAge) {
+//     // this = user;
 
-//     this.age = newAge;
+//     const changeAge = () => {
+//       console.log(`this ---->`, this);
+
+//       this.age = newAge;
+//     };
+
+//     changeAge();
 //   },
 // };
 
-// user.changeAge(40);
+// user.chageUserAge(40);
+
+// console.log(user);
 
 /*
 ? Яким буде результат виконання цього коду?
@@ -145,7 +155,6 @@
 // const goFn = user.go;
 
 // goFn();
-// user.go();
 
 /*
 ? Тут функція makeUser повертає об'єкт.
@@ -187,19 +196,24 @@
 
 //   up() {
 //     this.step += 1;
+
+//     return this;
 //   },
 
 //   down() {
 //     this.step -= 1;
+
+//     return this;
 //   },
 
 //   showStep() {
 //     console.log(this.step);
+
+//     return this;
 //   },
 // };
 
 // Тепер, якщо нам потрібно зробити кілька послідовних викликів, ми можемо зробити це так:
-
 // ladder.up();
 // ladder.up();
 // ladder.down();
